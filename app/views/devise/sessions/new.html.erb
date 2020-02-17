@@ -1,26 +1,37 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
+<div class="container-fluid as-full">
+  <div class="row as-full d-flex justify-content-center">
+    <div class="col-5 align-self-center" >
+    <center><img src="http://i.epvpimg.com/ksihcab.png" style="width: 250px;"></center>
+      <div class="card">
+  <div class="card-body">
+    <h5 class="card-title"><i class="fa fa-utensils"></i> TRANSPORTE Y LOGISTICA EDWIN JOSE BOLIVAR PARADA</h5>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+ <div class="form-group">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', placeholder: 'Correo electronico' %>
+    <i class="iconinput fa fa-user"></i>
   </div>
-
-  <div class="field">
+  <div class="form-group">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <%= f.password_field :password, autocomplete: "current-password", class: 'form-control', placeholder: 'Contraseña' %><i class="iconinput fa fa-keyboard"></i>
   </div>
-
   <% if devise_mapping.rememberable? %>
-    <div class="field">
+    <div class="form-group">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
   <% end %>
-
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Iniciar sesion", class: 'col-md-12 btn btn-primary' %>
+        <% end %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  </div>
+</div>
+      <div class="card mt-1">
+  <div class="card-body">
+    <small><%= render "devise/shared/links" %></small>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
