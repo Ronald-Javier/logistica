@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <a class="navbar-brand">
+  <% if user_signed_in? %>
+  <img src="https://cdn4.iconfinder.com/data/icons/aiga-symbol-signs/388/aiga_taxi-512.png" width="32" height="32" class="d-inline-block align-top" alt=""> Operador: <%= current_user.name %>
+  <% else %>
+  <img src="https://cdn4.iconfinder.com/data/icons/aiga-symbol-signs/388/aiga_taxi-512.png" width="32" height="32" class="d-inline-block align-top" alt="">
+  <% end %>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+      <a class="nav-item nav-link">
+       <% if user_signed_in? %>
+      <%= link_to  "Salir", destroy_user_session_path, method: :delete, class: 'nav-link' %>
+      <% else %>
+      <%= link_to  "Login", new_user_session_path %>
+      <% end %>
+      </a>
+    </div>
+  </div> 
+</nav>
