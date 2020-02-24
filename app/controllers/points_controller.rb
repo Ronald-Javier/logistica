@@ -4,7 +4,8 @@ class PointsController < ApplicationController
   # GET /points
   # GET /points.json
   def index
-    @points = Point.all
+    @points = Point.where(user_id: current_user)
+   
   end
 
   # GET /points/1
@@ -69,6 +70,6 @@ class PointsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def point_params
-      params.require(:point).permit(:name, :point_value)
+      params.require(:point).permit(:name, :point_value, :user_id)
     end
 end

@@ -16,6 +16,7 @@ class PointsTest < ApplicationSystemTestCase
 
     fill_in "Name", with: @point.name
     fill_in "Point value", with: @point.point_value
+    fill_in "User", with: @point.user_id
     click_on "Create Point"
 
     assert_text "Point was successfully created"
@@ -28,6 +29,7 @@ class PointsTest < ApplicationSystemTestCase
 
     fill_in "Name", with: @point.name
     fill_in "Point value", with: @point.point_value
+    fill_in "User", with: @point.user_id
     click_on "Update Point"
 
     assert_text "Point was successfully updated"

@@ -2,8 +2,10 @@
 
 one:
   name: MyString
-  point_value: 1
+  point_value: MyString
+  user: one
 
 two:
   name: MyString
-  point_value: 1
+  point_value: MyString
+  user: two

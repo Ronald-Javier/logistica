@@ -19,5 +19,17 @@ body {
     font-family: 'Sriracha', cursive;
     font-size: large;
   }
+
+  .iconinput {
+    position: relative;
+    z-index: 1;
+    left: 10px;
+    top: -31px;
+    width: 0;
+}
   
 
+.form-control {
+  padding-left: 30px;
+  padding-right: 30px;
+}
