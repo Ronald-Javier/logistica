@@ -5,7 +5,6 @@ class PointsController < ApplicationController
   # GET /points.json
   def index
     @points = Point.where(user_id: current_user)
-   
   end
 
   # GET /points/1
@@ -26,6 +25,7 @@ class PointsController < ApplicationController
   # POST /points.json
   def create
     @point = Point.new(point_params)
+    @point.user = current_user
 
     respond_to do |format|
       if @point.save

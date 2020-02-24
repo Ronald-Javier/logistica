@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_24_145207) do
+ActiveRecord::Schema.define(version: 2020_02_24_171139) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "completed_points", force: :cascade do |t|
+    t.bigint "point_id"
+    t.bigint "user_id"
+    t.boolean "point_status", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["point_id"], name: "index_completed_points_on_point_id"
+    t.index ["user_id"], name: "index_completed_points_on_user_id"
+  end
 
   create_table "points", force: :cascade do |t|
     t.string "name"
@@ -37,5 +47,7 @@ ActiveRecord::Schema.define(version: 2020_02_24_145207) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "completed_points", "points"
+  add_foreign_key "completed_points", "users"
   add_foreign_key "points", "users"
 end

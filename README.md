@@ -13,7 +13,7 @@ Modelo Logico:
 
 Modelo Fisico:
 
-[![Modelo Fisico](http://i.epvpimg.com/dZyocab.png "Modelo Fisico")](http://i.epvpimg.com/dZyocab.png "Modelo Fisico")
+[![Modelo Fisico](http://i.epvpimg.com/OZB7gab.png "Modelo Fisico")](http://i.epvpimg.com/OZB7gab.png "Modelo Fisico")
 
 
 Link del Trello: [Click Aqui](https://trello.com/b/iFmg2r77/proyecto-logistica "Click Aqui")
