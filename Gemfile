@@ -14,7 +14,6 @@ gem 'activestorage'
 gem 'mini_magick'
 gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 gem 'rails-erd', group: :development
-gem 'jquery-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
