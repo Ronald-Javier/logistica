@@ -10,6 +10,9 @@ gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'devise'
 gem 'puma', '~> 3.11'
+gem 'activestorage'
+gem 'mini_magick'
+gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 gem 'rails-erd', group: :development
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
