@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   get 'completed_points/index'
   resources :points
   devise_for :users, controllers: { 
-    registrations: 'users/registrations' 
+    registrations: 'users/registrations',
+    omniauth_callbacks: 'users/omniauth_callbacks' 
   }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   post 'completed_points/:point_id', to: "completed_points#create", as: 'completed_point'
