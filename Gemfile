@@ -12,6 +12,8 @@ gem 'devise'
 gem 'puma', '~> 3.11'
 gem 'activestorage'
 gem 'mini_magick'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 gem 'rails-erd', group: :development
 # Use SCSS for stylesheets
