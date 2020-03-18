@@ -255,7 +255,7 @@ ActiveAdmin.setup do |config|
   #   config.namespace :admin do |admin|
   #
   #     # Disable the links entirely
-  #     admin.download_links = false
+  #    admin.download_links = false
   #
   #     # Only show XML & PDF options
   #     admin.download_links = [:xml, :pdf]
@@ -325,4 +325,5 @@ ActiveAdmin.setup do |config|
   # You can inherit it with own class and inject it for all resources
   #
   # config.order_clause = MyOrderClause
+  config.download_links = [:csv, :xml, :xls]
 end

@@ -9,11 +9,11 @@
   </thead>
 
   <tbody>
-    <% @points.each do |point| %>
+    <% @completed_points.each do |point| %>
       <tr>
         <td><%= point.name %></td>
         <td><%= point.point_value %></td>
-        <td><%= point.point_status? 'Completado' : 'No Completado' %></td>
+        <td><%= point.point_status ? 'Completado' : 'No Completado' %></td>
         <td><%= link_to 'Destroy', point, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
       </tr>
     <% end %>
