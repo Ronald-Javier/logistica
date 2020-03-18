@@ -8,6 +8,6 @@ Rails.application.routes.draw do
     omniauth_callbacks: 'users/omniauth_callbacks' 
   }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  post 'completed_points/:point_id', to: "completed_points#create", as: 'completed_point'
+  post 'completed_points', to: "completed_points#create", as: 'completed_points'
   root 'completed_points#index'
 end
