@@ -1,20 +1,21 @@
-<table class="table table-striped table-hover ">
-  <thead>
-    <tr>
-      <th>NOMBRE</th>
-      <th>VALOR</th>
-      <th>ESTADO</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @completed_points.each do |completed_point| %>
-      <tr>
-        <td><%= completed_point.point.name %></td>
-        <td><%= completed_point.point.point_value %></td>
-        <td><%= completed_point.point_status ? 'Completado' : 'No Completado' %></td>
-      </tr>
-    <% end %>
-  </tbody>
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th scope="col" class="text-center">NOMBRE</th>
+            <th scope="col" class="text-center">VALOR</th>
+            <th scope="col" class="text-center">ESTADO</th>
+            <th scope="col" class="text-center">ACCIONES</th>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @completed_points.each do |completed_point| %>
+        <tr>
+            <td class="text-center"><%= completed_point.point.name %></td>
+            <td class="text-center"><%= completed_point.point.point_value %></td>
+            <td class="text-center"><%= completed_point.point_status ? 'Entregado' : 'No Entregado' %></td>
+            <td class="text-center"><%= link_to  "Borrar", delete_completed_point_path(completed_point), class: 'btn btn-danger', method: :delete, data: {confirm: 'Estas Seguro'} %></td>
+        </tr>
+        <% end %>
+    </tbody>
 </table>

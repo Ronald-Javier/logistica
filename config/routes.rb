@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   post 'completed_points', to: "completed_points#create", as: 'completed_points'
+  delete 'completed_points/:id', to: 'completed_points#destroy', as: 'delete_completed_point'
   root 'completed_points#index'
 end
