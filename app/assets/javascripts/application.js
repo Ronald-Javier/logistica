@@ -15,7 +15,8 @@
 //= require turbolinks
 //= require jquery/dist/jquery
 //= require moment/moment
-//= require popper.js/dist/umd/popper
-//= require bootstrap/dist/js/bootstrap
 //= require fullcalendar/dist/fullcalendar
 //= require fullcalendar/dist/locale/es
+//= require popper.js/dist/umd/popper
+//= require bootstrap/dist/js/bootstrap
+//= require completeds.js

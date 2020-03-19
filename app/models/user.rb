@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: %i[facebook]
   has_many :points
+  has_many :completed_points, through: :points
   has_one_attached :avatar
 
 
