@@ -1,14 +1,9 @@
-$(document).on('ready turbolinks:load', function(){
+$(document).ready(function() {
 
-    var token = $( 'meta[name="csrf-token"]' ).attr( 'content' );
+  // page is now ready, initialize the calendar...
 
-    $.ajaxSetup( {
-      beforeSend: function ( xhr ) {
-        xhr.setRequestHeader( 'X-CSRF-Token', token );
-      }
-    });
+  $('#calendar').fullCalendar({
+      // put your options and callbacks here
+  })
 
-    $('#calendar').fullCalendar({
-})
-
-})
+});
