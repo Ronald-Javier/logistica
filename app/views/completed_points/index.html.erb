@@ -7,7 +7,7 @@
     </thead>
     <tbody>
         <%= form_with(model: @new_completed_point, local: true) do |form| %>
-        <td class="text-center"><%= form.select(:point_id, options_for_select(@points.pluck(:name, :id)), include_blank: 'Selecciona un Punto') %></td>
+        <td class="text-center"><%= form.select(:point_id, options_for_select(@points.pluck(:name, :id))) %></td>
         <td class="text-center"><%= form.submit "Completar Punto", class: 'btn btn-light' %></td>
         <% end %>
     </tbody>

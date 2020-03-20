@@ -19,7 +19,7 @@ gem 'spreadsheet'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
-gem 'rails-erd', group: :development
+gem 'aws-sdk-s3', group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
