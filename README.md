@@ -14,7 +14,7 @@ Se requiere ejecutar el seed para Crear cuentas de administrador.
 
 Modelo Logico: 
 
-[![Modelo Logico](http://i.epvpimg.com/gYv7cab.png "Modelo Logico")](http://i.epvpimg.com/gYv7cab.png "Modelo Logico")
+[![Modelo Logico](http://i.epvpimg.com/SCl8fab.png "Modelo Logico")](http://i.epvpimg.com/SCl8fab.png "Modelo Logico")
 
 El diagrama conceptual muestra las principales entidades con las que trabajará la aplicación:
 
