@@ -1,2 +1,2 @@
-json.extract! completed_point, :id, :start, :point_name
+json.extract! completed_point, :id, :point_name, :start
 

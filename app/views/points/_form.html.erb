@@ -1,35 +1,24 @@
-  <div class="row justify-content-center">
-      <%= form_with(model: point, local: true) do |form| %>
-      <% if point.errors.any? %>
-      <div id="error_explanation">
-          <h2><%= pluralize(point.errors.count, "error") %> prohibited this point from being saved:</h2>
-
-          <ul>
-              <% point.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-              <% end %>
-              <div class="col-md-4 mt-5 bg-light rounded">
-                  <h1 class="text-center font-weight-bold text-primary">Contact Us</h1>
-                  <hr class="bg-light">
-                  <h5 class="text-center text-success"></h5>
-                  <form action="" method="post" id="form-box" class="p-2">
-                      <div class="form-group input-group">
-                          <div class="input-group-prepend">
-                              <span class="input-group-text"><i class="fas fa-user"></i></span>
-                          </div>
-                          <%= form.text_field :name, class: 'form-control', placeholder: 'Nombre del Punto' %>
-                      </div>
-                      <div class="form-group input-group">
-                          <div class="input-group-prepend">
-                              <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                          </div>
-                          <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
-                      </div>
-                      <div class="form-group">
-                          <input type="submit" name="submit" id="submit" class="btn btn-primary btn-block" value="Send">
-                      </div>
-                  </form>
-              </div>
-              <% end %>
-      </div>
-  </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-lg-3">
+            <div class="card w-100 mt-5">
+                <div class="card-body">
+                    <%= form_with(model: point, local: true) do |form| %>
+                    <div class="form-group">
+                        <%= form.text_field :name, class: 'form-control', placeholder: 'Nombre del Punto' %>
+                        <i class="iconinput fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="form-group">
+                        <%= form.text_field :point_value, class: 'form-control', placeholder: 'Valor del Punto' %><i class="iconinput fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="actions">
+                        <%= form.submit "Crear Punto", class: 'col-md-12 btn btn-primary' %>
+                        <% end %>
+                    </div><br>
+                    <div>
+                        <%= link_to 'Atras', points_path, class: 'col-md-12 btn btn-primary' %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

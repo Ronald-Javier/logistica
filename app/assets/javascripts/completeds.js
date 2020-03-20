@@ -9,7 +9,18 @@ $(document).ready(function() {
   });
 
   $('#calendar').fullCalendar({
-    events: '/completeds/index.json'
+      
+    events: '/completeds/index.json',
+    eventRender: function(event, element) { 
+      element.find('.fc-title').text(event.point_name); 
+    },
+    eventLimit: true, // for all non-TimeGrid views
+  views: {
+    timeGrid: {
+      eventLimit: 6 // adjust to 6 only for timeGridWeek/timeGridDay
+    }
+  }
+  
   })
 
 });

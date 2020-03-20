@@ -1,19 +1,29 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-lg-3">
+            <div class="card w-100 mt-5">
+                <div class="card-body">
 
-<p>
-  <strong>Name:</strong>
-  <%= @point.name %>
-</p>
+                    <p>
+                        <strong>Nombre:</strong>
+                        <%= @point.name %>
+                    </p>
 
-<p>
-  <strong>Point value:</strong>
-  <%= @point.point_value %>
-</p>
+                    <p>
+                        <strong>Valor del Punto:</strong>
+                        <%= @point.point_value %>
+                    </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @point.user %>
-</p>
+                    <p>
+                        <strong>Usuario:</strong>
+                        <%= @point.user.name %>
+                    </p>
 
-<%= link_to 'Edit', edit_point_path(@point) %> |
-<%= link_to 'Back', points_path %>
+                    <%= link_to 'Editar', edit_point_path(@point), class: 'btn btn-info' %> |
+                    <%= link_to 'Atras', points_path, class: 'btn btn-primary' %>
+
+                </div>
+            </div>
+        </div>
+    </div>

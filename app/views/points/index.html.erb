@@ -1,31 +1,35 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-md-20">
+            <div class="card w-150 mt-5">
+                <div class="card-body">
+                    <h1 class="text-center">PUNTOS DE LOGISTICA</h1>
 
-<h1 class="text-center">PUNTOS DE LOGISTICA</h1>
+                    <table class="table table-striped table-hover ">
+                        <thead>
+                            <tr>
+                                <th>NOMBRE</th>
+                                <th>VALOR</th>
+                                <th>USUARIO</th>
+                                <th colspan="3"></th>
+                            </tr>
+                        </thead>
 
-<table class="table table-striped table-hover ">
-  <thead>
-    <tr>
-      <th>NOMBRE</th>
-      <th>VALOR</th>
-      <th>USUARIO</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @points.each do |point| %>
-      <tr>
-        <td><%= point.name %></td>
-        <td><%= point.point_value %></td>
-        <td><%= point.user.name %></td>
-        <td><%= link_to 'Editar', edit_point_path(point), class: 'btn btn-light' %></td>
-        <td><%= link_to 'Destroy', point, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-
-<%= link_to  "Nuevo Punto", new_point_path, class: 'col-md-12 btn btn-primary' %>
+                        <tbody>
+                            <% @points.each do |point| %>
+                            <tr>
+                                <td><%= point.name %></td>
+                                <td><%= point.point_value %></td>
+                                <td><%= point.user.name %></td>
+                                <td><%= link_to 'Editar', edit_point_path(point), class: 'btn btn-light' %></td>
+                                <td><%= link_to 'Destroy', point, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+                            </tr>
+                            <% end %>
+                        </tbody>
+                    </table>
+                    <center><%= link_to  "Nuevo Punto", new_point_path, class: 'col-md-5 btn btn-primary' %></center>
+                </div>
+            </div>
+        </div>
+    </div>
