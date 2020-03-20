@@ -68,3 +68,8 @@ body {
   background-color: #42AEEC;
   color: #fff;
 }
+.vertical-center {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}

@@ -26,8 +26,10 @@ Link del Trello: [Click Aqui](https://trello.com/b/iFmg2r77/proyecto-logistica "
 Link a Heroku: [Heroku App](https://calm-brook-16139.herokuapp.com/ "Heroku App")
 
 Pasos para Iniciar el Proyecto:
-
 rails db:create
+
 rails db:migrate
+
 rails db:seed
+
 rails s
